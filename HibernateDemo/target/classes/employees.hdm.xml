@@ -22,7 +22,7 @@
 		<property name="PhotoPath" type="string" column="PhotoPath" not-null="false"/>
 		<property name="PostalCode" type="int" column="PostalCode" not-null="false" />
 		<property name="Region" type="string" column="Region" not-null="false"/>
-		<property name="ReportsTo" type="int"><column name="ReportsTo" not-null="true">
+		<property name="ReportsTo" type="int"><column name="ReportsTo" not-null="true"/>
 
 		</property>
 		<property name="Salary" type="float" column="Salary" not-null="false"/>

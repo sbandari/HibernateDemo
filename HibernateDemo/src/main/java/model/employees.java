@@ -19,8 +19,7 @@ public class employees {
 	private String PhotoPath;	
 	private int PostalCode;	
 	private String Region;	
-	//private int ReportsTo;	
-	private employees ReportsTo;
+	private int ReportsTo;	
 	private float Salary;	
 	private String Title;	
 	private String TitleOfCourtesy;
@@ -114,10 +113,10 @@ public class employees {
 	public void setRegion(String region) {
 		Region = region;
 	}
-	public employees getReportsTo() {
+	public int getReportsTo() {
 		return ReportsTo;
 	}
-	public void setReportsTo(employees reportsTo) {
+	public void setReportsTo(int reportsTo) {
 		ReportsTo = reportsTo;
 	}
 	public float getSalary() {
