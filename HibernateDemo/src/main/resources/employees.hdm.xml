@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.employees" table="employees">
+		<meta attribute="class-description"> This class is to connect the employees database</meta>
+		<id name="EmployeeID" type="int" column="EmployeeID">
+			<generator class="increment"></generator>
+		</id>
+		<property name="Address" type="string" column="Address" not-null="false"/>
+		<property name="BirthDate" type="date" column="BirthDate" not-null="false"/>
+		<property name="City" type="string" column="City" not-null="false"/>
+		<property name="Country" type="string" column="Country" not-null="false"/>
+		<property name="Extension" type="string" column="Extension" not-null="false"/>
+		<property name="FirstName" type="string" column="FirstName" not-null="false"/>
+		<property name="HireDate" type="date" column="HireDate" not-null="false"/>
+		<property name="HomePhone" type="int" column="HomePhone" not-null="false"/>
+		<property name="LastName" type="string" column="LastName" not-null="false"/>
+		<property name="Notes" type="string" column="Notes" not-null="false"/>
+		<property name="Photo" type="binary" column="Photo" not-null="false"/>
+		<property name="PhotoPath" type="string" column="PhotoPath" not-null="false"/>
+		<property name="PostalCode" type="int" column="PostalCode" not-null="false" />
+		<property name="Region" type="string" column="Region" not-null="false"/>
+		<property name="ReportsTo" type="int"><column name="ReportsTo" not-null="true">
+
+		</property>
+		<property name="Salary" type="float" column="Salary" not-null="false"/>
+		<property name="Title" type="string" column="Title" not-null="false"/>
+		<property name="TitleOfCourtesy" type="string" column="TitleOfCourtesy" not-null="false"/>
+		
+		
+		
+	</class>
+</hibernate-mapping>
