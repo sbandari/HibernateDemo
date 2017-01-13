@@ -8,9 +8,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 public class HibernateUtil {
-private static SessionFactory sessionFactory=buildSessionFactory();
+private static SessionFactory sessionFactory=buildSessinFactory();
 
-private static SessionFactory buildSessionFactory() {
+private static SessionFactory buildSessinFactory() {
 	Configuration con = new Configuration();
 	con.configure("hibernate.cfb.xml");
 	ServiceRegistry sr= new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
