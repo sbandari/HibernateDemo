@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 public class Imgtobyte {
 	
 	public byte[] extractBytes () throws IOException {
-		Path p=Paths.get("D:/SpringTrainingExecution/workspace/HibernateDemo/src/main/resources/images/images.jpg");
+		Path p=Paths.get("C:/Users/bsant/Desktop/images.jpg");
 		 // open image
 		 File imgPath = new File(p.toString());
 		 BufferedImage bufferedImage = ImageIO.read(imgPath);

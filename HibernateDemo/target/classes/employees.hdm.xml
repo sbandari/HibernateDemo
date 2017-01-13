@@ -15,21 +15,22 @@
 		<property name="Extension" type="string" column="Extension" not-null="false"/>
 		<property name="FirstName" type="string" column="FirstName" not-null="false"/>
 		<property name="HireDate" type="date" column="HireDate" not-null="false"/>
-		<property name="HomePhone" type="int" column="HomePhone" not-null="false"/>
+		<property name="HomePhone" type="string" column="HomePhone" not-null="false"/>
 		<property name="LastName" type="string" column="LastName" not-null="false"/>
 		<property name="Notes" type="string" column="Notes" not-null="false"/>
 		<property name="Photo" type="binary" column="Photo" not-null="false"/>
 		<property name="PhotoPath" type="string" column="PhotoPath" not-null="false"/>
 		<property name="PostalCode" type="int" column="PostalCode" not-null="false" />
 		<property name="Region" type="string" column="Region" not-null="false"/>
-		<property name="ReportsTo" type="int"><column name="ReportsTo" not-null="true"/>
-
-		</property>
+		<property name="ReportsTo" type="int"  update="false"
+            insert="false" column="ReportsTo" not-null="true"/>
 		<property name="Salary" type="float" column="Salary" not-null="false"/>
 		<property name="Title" type="string" column="Title" not-null="false"/>
 		<property name="TitleOfCourtesy" type="string" column="TitleOfCourtesy" not-null="false"/>
-		
-		
-		
+		<many-to-one name="manager" class="model.employees" column="ReportsTo" not-null="false" ></many-to-one>
+		<set name="employees" table="employees" lazy="false" inverse="false">
+			<key column="ReportsTo"/> 
+			<one-to-many class="model.employees"/> 
+		</set>
 	</class>
 </hibernate-mapping>
